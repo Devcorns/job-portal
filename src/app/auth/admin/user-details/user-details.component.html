@@ -1,0 +1,56 @@
+
+<div class="row " *ngIf="usrData">
+  <div class="col-sm-4 mx-auto">
+    <div class="card">
+      <div class="card-body">
+        <div >
+          <div class=" mb-4 ">
+            <div class="border-bottom border-success">
+              <label class="fw-light text-muted small mb-1" for="user-id">User Id</label>
+              <p id="user-id" class="text-success mb-1">{{usrData.id}}</p>
+            </div>
+
+          </div>
+          <div class=" mb-4 ">
+            <div class="border-bottom border-success">
+              <label class="fw-light text-muted small mb-1" for="user-name">Name</label>
+              <p id="user-name" class="text-success mb-1">{{usrData.name}}</p>
+
+            </div>
+          </div>
+          <div class="mb-4 ">
+            <div class="border-bottom border-success">
+              <label class="fw-light text-muted small mb-1" for="user-username">Username</label>
+              <p id="user-username" class="text-success mb-1">{{usrData.username}}</p>
+            </div>
+          </div>
+          <div class="mb-4 ">
+            <div class="border-bottom border-success">
+              <label class="fw-light text-muted small mb-1" for="user-email">User Email</label>
+              <p id="user-email" class="text-success mb-1">{{usrData.email}}</p>
+
+            </div>
+          </div>
+          <div class="mb-4">
+            <div class="border-bottom border-success">
+              <label class="fw-light text-muted small mb-1" for="user-addr">User Address</label>
+              <p id="user-addr" class="text-success mb-1">{{usrData.address.city}}</p>
+            </div>
+          </div>
+          <div class="d-grid">
+            <a routerLink="/auth/admin/dashboard" class="btn btn-warning btn-block">
+              Back to dashboard
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- <button (click)="getUserInfo()">get user data</button> -->
