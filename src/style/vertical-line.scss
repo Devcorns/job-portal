@@ -1,0 +1,50 @@
+.with-vertical-line {
+    flex-wrap: wrap;
+    &-main {
+        a {
+            padding: 0;
+        }
+        & li {
+            position: relative;
+            padding: 0;
+            padding-right: 1rem;
+            @include media-breakpoint-up(md) { 
+                margin-bottom: 0.3rem;
+            }
+            
+            
+            &:last-child {
+                &::after {
+                    content: none;
+                }
+            }
+            &::after {
+                content: "|";
+                position: absolute;
+                right: 0.4rem;
+                top: 0rem;
+                font-size: 1rem;
+
+            }
+        }
+    }
+    & li {
+        padding: 0;
+        padding-right: 1rem;
+        @include media-breakpoint-up(md) { 
+            margin-bottom: 0.3rem;
+        }
+        
+        
+        &:last-child {
+            &::after {
+                content: none;
+            }
+        }
+        &::after {
+            content: "|";
+            position: relative;
+            left: 0.5rem;
+        }
+    }
+}

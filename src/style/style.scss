@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap');
+@import "bootstrap/scss/functions";
+
+@import "~bootstrap/scss/variables";
+@import "./bootstrap/custom-variables";
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/helpers";
+@import "~bootstrap/scss/carousel";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/pagination";
+@import "~bootstrap/scss/accordion";
+@import "~bootstrap/scss/transitions";
+@import "./bootstrap/custom-utility";
+// @import "../styles/bootstrap/custom-utility";
+@import "~bootstrap/scss/utilities/api";
+
+// 8. Add additional custom code here
+// @import './globals.scss';
+// @import './icons/icons.scss';
+// @import './portfolio-nav.scss';
+// @import './zig-zak-component.scss';
+// @import './timeline.scss';
+// @import './vertical-line.scss';
+// @import './header.scss';

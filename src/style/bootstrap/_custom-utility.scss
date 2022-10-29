@@ -1,0 +1,40 @@
+$utilities: map-merge(
+  $utilities,
+  (
+    "background-color": (
+            property: background-color,
+            class: bg,
+            local-vars: (
+              "bg-opacity": 1
+            ),
+            values: map-merge(
+              $utilities-bg-colors,
+              (
+                "transparent": transparent
+              )
+            )
+          ),
+          "min-viewport-height": (
+            responsive: true,
+            property: min-height,
+            class: min-vh,
+            values: (
+                50: 50vh,
+                75: 75vh,
+                80: 80vh,
+                85: 85vh,
+                100: 100vh
+            )
+          ),
+          "min-fixed-height": (
+            property: min-height,
+            class: min-fvh,
+            values: (
+                20: 15rem,
+                30: 20rem,
+                40: 25rem,
+                50: 30rem
+            )
+          ),
+  )
+);

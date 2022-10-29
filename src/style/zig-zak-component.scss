@@ -1,0 +1,30 @@
+.zigzag-layout {
+    padding: 1rem;
+    
+        .content-text {
+            @include media-breakpoint-up(md) {  
+                max-width: 476px;
+            }
+        }
+        .img-content {
+            min-height: 15rem;
+            
+            @include media-breakpoint-up(md) { 
+                min-height: 600px;
+             }
+            img {
+                object-fit:cover;
+                min-height: auto;
+                width: 100%;
+                @include media-breakpoint-up(md) { 
+                    object-fit: cover;
+                    min-height: 600px;
+                    object-position: center center;
+                    height: 100%;
+                }
+                
+            }
+        }
+}
+
+

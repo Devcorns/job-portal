@@ -6,6 +6,7 @@ import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { HeaderComponent } from './includes/header/header.component';
 import { FooterComponent } from './includes/footer/footer.component';
 import { FrontendLayoutComponent } from './layouts/frontend-layout/frontend-layout.component';
@@ -16,6 +17,9 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildAComponent } from './parent/child-a/child-a.component';
 import { AnimationsModule } from './animations/animations.module';
 import LearnTest from './learn-test-cases/learn-test';
+import {FrontHeaderComponent} from './includes/front-header/front-header.component';
+// import { FrontFromCommandComponent } from './includes/front-from-command/front-from-command.component';
+
 // import { LayoutsComponent } from './layouts/layouts.component';
 
 @NgModule({
@@ -26,7 +30,9 @@ import LearnTest from './learn-test-cases/learn-test';
     FrontendLayoutComponent,
     ParentComponent,
     ChildAComponent,
-    LearnTest
+    LearnTest,
+    FrontHeaderComponent,
+    // FrontFromCommandComponent
     // LayoutsComponent
   ],
   imports: [

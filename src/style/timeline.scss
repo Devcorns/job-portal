@@ -1,0 +1,80 @@
+.timeline-section {
+    .timeline-container {
+        max-width: 100rem;
+        .timeline-main {
+            padding-left: 40px;
+            // padding-right: 20px;
+            @include media-breakpoint-up(sm) {
+                // padding: 20px;
+                padding: 0;
+            }
+            overflow: hidden;
+            .timeline-item {
+                position: relative;
+
+                // float: left;
+                &::after {
+                    content: "";
+                    background-color: #cd5f91;
+                    height: 16px;
+                    width: 16px;
+                    position: absolute;
+                    left: -27px;
+                    top: 10px;
+                    border-radius: 100%;
+                    right: auto;
+                    @include media-breakpoint-up(sm) { 
+                        // left: auto;
+                        right: auto;
+                        top: 10px;
+                        left: -8px;
+                    }
+                }
+                &:nth-child(odd) {
+                    &::after {
+                        left: -27px;
+                        top: 10px;
+                        @include media-breakpoint-up(sm) { 
+                            // left: auto;
+                            right: -0.5rem;
+                            top: 10px;
+                            left: auto;
+                        }
+                    }
+                }
+                
+                
+                @include media-breakpoint-up(sm) {
+                    float: right;
+                    width: 50%;
+                    position: relative;
+                    margin: 0 0 0 4.2rem;
+                    padding: 0 0 0 4.2rem;
+                    &:nth-child(odd) {
+                        float: left;
+                        margin: 0 4.2rem 0 0;
+                        padding: 0 4.2rem 0 0;
+                        text-align: right;
+                    }
+                }
+                
+            }
+        }
+        &::before {
+            content: "";
+            height: 100%;
+            width: 7px;
+            border-left: 2px solid #cd5f91;
+            //transform: translateX(-50%);
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            @include media-breakpoint-up(sm) {
+                left: 50%;
+                top: 20px;
+                transform: translateX(-50%);
+                width: auto;
+            }
+        }
+    }
+}
