@@ -9,6 +9,8 @@ bin-release/
 .settings/
 node_modules
 .angular/cache
+dist
+schematics
 
 # Executables
 *.swf

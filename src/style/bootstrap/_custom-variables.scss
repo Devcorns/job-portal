@@ -46,12 +46,13 @@ $yellow:  #ffc107 !default;
 $green:   #198754 !default;
 $teal:    #20c997 !default;
 $cyan:    #0dcaf0 !default;
-$wpink: #cd5f91;
+// $wpink: #cd5f91;
 $charcoal: #3c3c3c;
-$charcoalp1: #919191;
-$graygold: #afaaa0;
-$lightgrey: #f0edec;
-$greyone:#f4f4ef;
+// $charcoalp1: #919191;
+// $graygold: #afaaa0;
+// $lightgrey: #f0edec;
+// $greyone:#f4f4ef;
+$paleyello:#fffaf0;
 // scss-docs-end color-variables
 
 // scss-docs-start colors-map
@@ -70,12 +71,13 @@ $colors: (
   "white":      $white,
   "gray":       $gray-600,
   "gray-dark":  $gray-800,
-  "wpink": $wpink,
-  "charcoal": $charcoal,
-  "charcoal-one": $charcoalp1,
-  "greygold":$graygold,
-  "lightgrey":$lightgrey,
-  "greyone": $greyone,
+  // "wpink": $wpink,
+  // "charcoal": $charcoal,
+  // "charcoal-one": $charcoalp1,
+  // "greygold":$graygold,
+  // "lightgrey":$lightgrey,
+  // "greyone": $greyone,
+  "pale-yellow": $paleyello
 );
 // scss-docs-end colors-map
 
@@ -318,12 +320,12 @@ $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
-$themeprimary:  $wpink;
-$themesecondary: $charcoal;
-$themesecondary-p1:$charcoalp1;
-$themegold: $graygold;
-$themelightgrey: $lightgrey;
-$themegreyone:$greyone;
+$themeyellow:  $paleyello;
+// $themesecondary: $charcoal;
+// $themesecondary-p1:$charcoalp1;
+// $themegold: $graygold;
+// $themelightgrey: $lightgrey;
+// $themegreyone:$greyone;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -336,12 +338,12 @@ $theme-colors: (
   "danger":     $danger,
   "light":      $light,
   "dark":       $dark,
-  "themeprimary": $themeprimary,
-  "themesecondary": $themesecondary,
-  "themesecondary-p1": $themesecondary-p1,
-  "themegreygold": $themegold,
-  "themelightgrey": $lightgrey,
-  "themegreyone":$greyone,
+  "theme-yellow": $themeyellow,
+  // "themesecondary": $themesecondary,
+  // "themesecondary-p1": $themesecondary-p1,
+  // "themegreygold": $themegold,
+  // "themelightgrey": $lightgrey,
+  // "themegreyone":$greyone,
 );
 // scss-docs-end theme-colors-map
 
@@ -362,9 +364,9 @@ $escaped-characters: (
 
 $enable-caret:                true;
 $enable-rounded:              true;
-$enable-shadows:              true;
+$enable-shadows:              false;
 $enable-gradients:            false;
-$enable-transitions:          true;
+$enable-transitions:          false;
 $enable-reduced-motion:       true;
 $enable-smooth-scroll:        true;
 $enable-grid-classes:         true;
@@ -765,8 +767,8 @@ $input-btn-font-size:         $font-size-base !default;
 $input-btn-line-height:       $line-height-base !default;
 
 $input-btn-focus-width:         0;//.25rem !default;
-$input-btn-focus-color-opacity: .25 !default;
-$input-btn-focus-color:         rgba($component-active-bg, $input-btn-focus-color-opacity) !default;
+$input-btn-focus-color-opacity: .1 !default;
+$input-btn-focus-color:         none;//0;//rgba($component-active-bg, $input-btn-focus-color-opacity) !default;
 $input-btn-focus-blur:          0 !default;
 $input-btn-focus-box-shadow:    0;//0 0 $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color !default;
 
@@ -1312,11 +1314,11 @@ $accordion-body-padding-x:                $accordion-padding-x !default;
 
 $accordion-button-padding-y:              $accordion-padding-y !default;
 $accordion-button-padding-x:              $accordion-padding-x !default;
-$accordion-button-color:                  $themesecondary;//$themeprimary;//var(--#{$prefix}body-color);
+$accordion-button-color:                  $themeyellow;//var(--#{$prefix}body-color);
 $accordion-button-bg:                     var(--#{$prefix}accordion-bg) !default;
 $accordion-transition:                    $btn-transition, border-radius .15s ease !default;
 $accordion-button-active-bg:              tint-color($component-active-bg, 90%) !default;
-$accordion-button-active-color:           $themesecondary;//$themeprimary;//shade-color($wpink, 10%) !default;
+$accordion-button-active-color:           $themeyellow;//shade-color($wpink, 10%) !default;
 
 $accordion-button-focus-border-color:     $input-focus-border-color !default;
 $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
