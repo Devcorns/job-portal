@@ -3,3 +3,11 @@
 /* Importing Bootstrap SCSS file. */
 @import './style/style.scss';
 
+.btn-outline-warning {
+    &:hover
+    {
+        color:$white;
+    }
+}   
+
+
