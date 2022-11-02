@@ -13,36 +13,48 @@
       </div>
     </header>
     <h1 class="text-center mb-3">Inspiring Candidates to change your future</h1>
-    <form>
-      <div class="">
+    <form #form="ngForm">
+      <div class="row">
        
          
-          <div class="input-group mb-3 ">
-            <input type="text" class="form-control border-0 " aria-label="Search Jobs" placeholder="Search Jobs">
-            <div ngbDropdown class="d-inline-block">
-              <button type="button" class="btn btn-outline-warning rounded-0 "  id="dropdownBasic1" ngbDropdownToggle>
-                Location
-              </button>
-              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                <button ngbDropdownItem>Action - 1</button>
-                <button ngbDropdownItem>Another Action</button>
-                <button ngbDropdownItem>Something else is here</button>
+          <div class="col-sm-12  mb-3 ">
+            <input list="jobs" type="text" [(ngModel)]="jobtitle" name="jobtitle" class="d-inline-block form-control border-0 mb-2" aria-label="Search Jobs" placeholder="Search Jobs">
+            <datalist id="jobs">
+              <option value={{i.title}}  *ngFor="let i of jobList">
+            </datalist>
+            <div class="row mb-2">
+              <div ngbDropdown class="col-6" #locDropdown="ngbDropdown">
+                <button type="button" class="btn btn-outline-warning rounded-0 w-100"  id="dropdownBasic1" ngbDropdownToggle>
+                  {{location_title}}
+                </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="p-0 w-50">
+                  <input type="text" class="form-control border-1 rounded-0 px-2" placeholder="Search experience">
+                  
+                    <button *ngFor="let i of expList" ngbDropdownItem (click)="getLoc(i.title)">{{i.title+" years"}}</button>
+                  
+                </div>
+              </div>
+              <div ngbDropdown class="col-6" #expDropdown="ngbDropdown">
+                <button type="button" class="btn btn-outline-warning rounded-0 w-100"  id="dropdownBasic1" ngbDropdownToggle>
+                  {{experience_title}}
+                </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="p-0 w-50">
+                  <input type="text" class="form-control border-1 rounded-0 px-2" placeholder="Search job profile">
+                  
+                  <button *ngFor="let i of jobList" ngbDropdownItem (click)="getExp(i.title)">{{i.title}}</button>
+                  
+                </div>
               </div>
             </div>
-            <div ngbDropdown class="d-inline-block">
-              <button type="button" class="btn btn-outline-warning rounded-0 "  id="dropdownBasic1" ngbDropdownToggle>
-                Experience
-              </button>
-              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                <button ngbDropdownItem>Action - 1</button>
-                <button ngbDropdownItem>Another Action</button>
-                <button ngbDropdownItem>Something else is here</button>
-              </div>
+            <div class="text-end">
+              <button class="btn btn-warning text-white" (click)="searchHandle()">search</button>
             </div>
             
           </div>
+
         
       </div>
+      <!-- <button (click)="dropdown.open()">open dropdown</button> -->
       
     </form>
    
