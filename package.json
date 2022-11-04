@@ -3,18 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    
+    "start":"ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "postinstall": "ng build",
-    "start": "node server.js"
+    "postinstall": "ng build"
 
   },
-  "engines": {
-    "node": "16.18.0",
-    "npm": "8.19.2"
-  },
+  
   "private": true,
   "dependencies": {
     "@angular/animations": "^14.0.0",
@@ -34,10 +30,7 @@
     "web-animations-js": "^2.3.2",
     "zone.js": "~0.11.4"
   },
-  "schematics": "./schematics/collection.json",
-  "ng-add": {
-    "save": "devDependencies"
-  },
+  
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.2.1",
     "@angular/cli": "~14.2.1",

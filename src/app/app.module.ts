@@ -18,6 +18,7 @@ import { ChildAComponent } from './parent/child-a/child-a.component';
 import { AnimationsModule } from './animations/animations.module';
 import LearnTest from './learn-test-cases/learn-test';
 import {FrontHeaderComponent} from './includes/front-header/front-header.component';
+import { JobFieldComponent } from './job-field-component/job-field-component';
 // import { FrontFromCommandComponent } from './includes/front-from-command/front-from-command.component';
 
 // import { LayoutsComponent } from './layouts/layouts.component';
@@ -32,6 +33,7 @@ import {FrontHeaderComponent} from './includes/front-header/front-header.compone
     ChildAComponent,
     LearnTest,
     FrontHeaderComponent,
+    JobFieldComponent
     // FrontFromCommandComponent
     // LayoutsComponent
   ],

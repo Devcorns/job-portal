@@ -1,0 +1,27 @@
+[
+    {
+        "id":1,
+        "title":"Mobile Application",
+        "target":"mobile-application"
+    },
+    {
+        "id":2,
+        "title":"Frontend Developers",
+        "target":"frontend-developer"
+    },
+    {
+        "id":3,
+        "title":"Backend Developer",
+        "target":"backend-developer"
+    },
+    {
+        "id":4,
+        "title":"DevOps",
+        "target":"devops"
+    },
+    {
+        "id":5,
+        "title":"Analytics & Data Science",
+        "target":"analytics-data-science"
+    }
+]

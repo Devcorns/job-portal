@@ -5,6 +5,21 @@ import { NgbDropdown } from '@ng-bootstrap/ng-bootstrap';
 // import ext from "./../../json-apis/experience";
 import exp from './../../json-apis/experience.json';
 import jobprofile from './../../json-apis/jobprofiles.json';
+import jobfield from './../../json-apis/job-field.json';
+
+interface expListInterface {
+    id:number,
+    title: string,
+}
+interface jobListInterface {
+    id:number,
+    title:string
+}
+interface jobFiledInterface {
+    id:number,
+    title: string,
+    target:URL
+}
 
 @Component({
     selector:'app-front-header',
@@ -14,25 +29,21 @@ import jobprofile from './../../json-apis/jobprofiles.json';
 
  export class FrontHeaderComponent implements OnInit {
 
-    expList:{id:number, title:string}[] = exp;
-    jobList:{id:number,title:string}[] = jobprofile;
+    expList:expListInterface[] = exp;
+    jobList:jobListInterface[] = jobprofile;
+    jobField:jobFiledInterface[] = jobfield;
     experience_title:string="Experience";
     location_title:string="Location";
     jobtitle=""
+
 
     @ViewChild('expDropdown', { static: true })
     expdropdown!: NgbDropdown;
     @ViewChild('locDropdown',{static: true})
     locdropdown!:NgbDropdown;
     logo= "<Hire Me />"
-
-
-     
-
     ngOnInit() {
-        // console.log(this.countryList)
-        // this.expdropdown.open()    
-        // this.locdropdown.open()    
+        
     }
 
     getExp(val:string) {

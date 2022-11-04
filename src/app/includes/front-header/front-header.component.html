@@ -62,21 +62,17 @@
   </div>
   </div>
 
-  <div class="container">
-    <ul class="nav nav-pills nav-fill">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">
-          <div>
-  
-          </div>
+  <section class="bg-white py-3">
+    <ul class="nav nav-pills nav-fill container mx-auto">
+      <li class="nav-item col-6 col-sm-2 hover-text-warning hover-border-warning" *ngFor="let item of jobField;let i=index">
+        <a class="pt-2 pb-1 bg-white text-decoration-none text-black  rounded-0   {{i==0?'':''}}" aria-current="page" href="job-field/{{item.target}}">
+          <h4 class="fw-semibold mb-3 mb-md-2">
+            <span class="mb-3 d-inline-block">{{item.id}}</span>
+            <br />
+            {{item.title}}
+          </h4>
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Much longer nav link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
     </ul>
-  </div>
+  </section>
   
